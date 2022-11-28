@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es-Co">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+</head> 
+<body>
+    <nav>
+        <div class="imagen">
+            <img src="https://i.ibb.co/BzFRsTt/mont-removebg-preview.png" class="mont">
+        </div>
+        <div class="icons">
+            <div class="icons1">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(119, 149, 158, 1);">
+                        <path d="M19 3H5c-1.103 0-2 .897-2 2v4h18V5c0-1.103-.897-2-2-2zM3 19c0 1.103.897 2 2 2h8V11H3v8zm12 2h4c1.103 0 2-.897 2-2v-8h-6v10z"></path>
+                    </svg>
+                </div>
+                <div class="iconM">                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(119, 149, 158, 1);">
+                        <circle cx="9.5" cy="9.5" r="1.5"></circle>
+                        <circle cx="14.5" cy="9.5" r="1.5"></circle>
+                        <path d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.897 5.515 5 6.934V22l5.34-4.004C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8zm0 14h-.333L9 18v-2.417l-.641-.247C5.671 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6-3.589 6-8 6z"></path>
+                    </svg>
+                </div>
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(119, 149, 158, 1);">
+                        <path d="M20 3H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-9 14H5v-2h6v2zm8-4H5v-2h14v2zm0-4H5V7h14v2z"></path>
+                    </svg>
+                </div>
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(119, 149, 158, 1);">
+                        <path d="M21 20V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2zM9 18H7v-2h2v2zm0-4H7v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm2-5H5V7h14v2z"></path>
+                    </svg>
+                </div>
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(119, 149, 158, 1);">
+                        <path d="M7 14.001h2v2H7z"></path><path d="M19 2h-8a2 2 0 0 0-2 2v6H5c-1.103 0-2 .897-2 2v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2zM5 20v-8h6v8H5zm9-12h-2V6h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V6h2v2z"></path>
+                    </svg>
+                </div>
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(119, 149, 158, 1);">
+                        <path d="M6 22h13a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h1zm6-17.001c1.647 0 3 1.351 3 3C15 9.647 13.647 11 12 11S9 9.647 9 7.999c0-1.649 1.353-3 3-3zM6 17.25c0-2.219 2.705-4.5 6-4.5s6 2.281 6 4.5V18H6v-.75z"></path>
+                    </svg>
+                </div>
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(119, 149, 158, 1);">
+                        <path d="m21.512 6.112-3.89 3.889-3.535-3.536 3.889-3.889a6.501 6.501 0 0 0-8.484 8.486l-6.276 6.275a.999.999 0 0 0 0 1.414l2.122 2.122a.999.999 0 0 0 1.414 0l6.275-6.276a6.501 6.501 0 0 0 7.071-1.414 6.504 6.504 0 0 0 1.414-7.071z"></path>
+                    </svg>
+                </div>
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(119, 149, 158, 1);">
+                        <path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="icons2">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(119, 149, 158, 1);">
+                        <path d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z"></path>
+                        <path d="m2.845 16.136 1 1.73c.531.917 1.809 1.261 2.73.73l.529-.306A8.1 8.1 0 0 0 9 19.402V20c0 1.103.897 2 2 2h2c1.103 0 2-.897 2-2v-.598a8.132 8.132 0 0 0 1.896-1.111l.529.306c.923.53 2.198.188 2.731-.731l.999-1.729a2.001 2.001 0 0 0-.731-2.732l-.505-.292a7.718 7.718 0 0 0 0-2.224l.505-.292a2.002 2.002 0 0 0 .731-2.732l-.999-1.729c-.531-.92-1.808-1.265-2.731-.732l-.529.306A8.1 8.1 0 0 0 15 4.598V4c0-1.103-.897-2-2-2h-2c-1.103 0-2 .897-2 2v.598a8.132 8.132 0 0 0-1.896 1.111l-.529-.306c-.924-.531-2.2-.187-2.731.732l-.999 1.729a2.001 2.001 0 0 0 .731 2.732l.505.292a7.683 7.683 0 0 0 0 2.223l-.505.292a2.003 2.003 0 0 0-.731 2.733zm3.326-2.758A5.703 5.703 0 0 1 6 12c0-.462.058-.926.17-1.378a.999.999 0 0 0-.47-1.108l-1.123-.65.998-1.729 1.145.662a.997.997 0 0 0 1.188-.142 6.071 6.071 0 0 1 2.384-1.399A1 1 0 0 0 11 5.3V4h2v1.3a1 1 0 0 0 .708.956 6.083 6.083 0 0 1 2.384 1.399.999.999 0 0 0 1.188.142l1.144-.661 1 1.729-1.124.649a1 1 0 0 0-.47 1.108c.112.452.17.916.17 1.378 0 .461-.058.925-.171 1.378a1 1 0 0 0 .471 1.108l1.123.649-.998 1.729-1.145-.661a.996.996 0 0 0-1.188.142 6.071 6.071 0 0 1-2.384 1.399A1 1 0 0 0 13 18.7l.002 1.3H11v-1.3a1 1 0 0 0-.708-.956 6.083 6.083 0 0 1-2.384-1.399.992.992 0 0 0-1.188-.141l-1.144.662-1-1.729 1.124-.651a1 1 0 0 0 .471-1.108z"></path>
+                    </svg>
+                </div>
+                <div class="iconF">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(17, 56, 61, 1);">
+                        <path d="M10.296 7.71 14.621 12l-4.325 4.29 1.408 1.42L17.461 12l-5.757-5.71z"></path>
+                        <path d="M6.704 6.29 5.296 7.71 9.621 12l-4.325 4.29 1.408 1.42L12.461 12z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="mitad">
+
+        <div class="header">
+            <div class="search">
+                <span class="Title">Dashboard</span> 
+                <input type="text" placeholder="Search properties, tasks, etc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(118, 118, 118);transform: msFilter"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+            </div>
+            <div class="profileImg">
+                <img src="https://i.ibb.co/y64YYDn/client.png" alt="">
+                <div class="profileText">
+                    <p class="saludo">Hi, <span class="saludo1">Maurice</span></p>
+                    <span class="text">Here's your activity today, take a moment to have look at this</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="expensesActivity">
+            <div class="topExp">
+                <div class="context">
+                    <div class="titleTopExp">
+                        <h2>Accounting</h2>
+                        <p class="date">March 1,2020 - April 31,2021</p>
+                    </div>
+                    <div class="espTopExp">    
+                        <p class="remaining-money">AVG. Monthly Icome</p>
+                        <h3>$5,849.36</h3>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                        </svg> <span class="porcentaje">3.89%</span> vs $5.432.74 <span class="days">prev. 90 days</span></p>
+                    </div>
+                </div>
+
+            
+
+                    <div id="graph">    
+                        <div class="spancito">
+                            <span class="span1">Nov</span> <span class="span2">Dec</span> <span class="span3">Jan</span> <span class="span4">Feb</span> <span class="span5">Mar</span> <span class="span6">Apr</span>
+                        </div>
+                    </div>
+                    </div>
+      
+            <div class="line"></div>
+            <div class="Income-Expenses">
+                <svg xmlns="http://www.w3.org/2000/svg" class="cash-green-icon" width="60" height="60" viewBox="0 0 24 24" style="fill: rgb(81, 200, 31);"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 14.915V18h-2v-1.08c-2.339-.367-3-2.002-3-2.92h2c.011.143.159 1 2 1 1.38 0 2-.585 2-1 0-.324 0-1-2-1-3.48 0-4-1.88-4-3 0-1.288 1.029-2.584 3-2.915V6.012h2v1.109c1.734.41 2.4 1.853 2.4 2.879h-1l-1 .018C13.386 9.638 13.185 9 12 9c-1.299 0-2 .516-2 1 0 .374 0 1 2 1 3.48 0 4 1.88 4 3 0 1.288-1.029 2.584-3 2.915z"></path></svg>
+                <span class="total-income">$89,240.38</span> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="cash-red-icon" width="60" height="60" viewBox="0 0 24 24" style="fill: rgb(244, 38, 38);"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 14.915V18h-2v-1.08c-2.339-.367-3-2.002-3-2.92h2c.011.143.159 1 2 1 1.38 0 2-.585 2-1 0-.324 0-1-2-1-3.48 0-4-1.88-4-3 0-1.288 1.029-2.584 3-2.915V6.012h2v1.109c1.734.41 2.4 1.853 2.4 2.879h-1l-1 .018C13.386 9.638 13.185 9 12 9c-1.299 0-2 .516-2 1 0 .374 0 1 2 1 3.48 0 4 1.88 4 3 0 1.288-1.029 2.584-3 2.915z"></path></svg>
+                <span class="total-expenses">$16,237.82</span>
+                <p>Total Income <span class="descripcion">Total Expenses</span></p>
+            </div>
+        </div>
+
+            <div class="hijos">
+        
+                <div class="parte1">
+                    
+                    <h3>Task Summary</h3>
+        
+                    <div class="partes">
+                        <div class="cuadro1">
+                            
+                          <h4>New</h4>
+        
+                          <div class="content">
+                                <span>3</span>
+        
+                                <svg class="icones" xmlns="http://www.w3.org/2000/svg" width="40" height="35" viewBox="0 0 24 24" style="fill: rgb(236, 231, 231);"><path d="m14.303 6-3-2H6V2H4v20h2v-8h4.697l3 2H20V6z"></path></svg> 
+                          </div>
+        
+        
+                           
+                        </div>
+        
+        
+                        <div class="cuadro2">
+                            <h4>Assigned</h4>
+        
+                            <div class="content">
+        
+                                <span>16</span>
+        
+                                <svg class="icones" xmlns="http://www.w3.org/2000/svg"  width="40" height="35" viewBox="0 0 24 24" style="fill: rgb(246, 239, 239);"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 15v-4H7v-2h5V7l5 5-5 5z"></path></svg>
+        
+                            </div>
+        
+                          
+                        </div>
+        
+        
+                        <div class="cuadro3">
+                            <h4>Closed</h4>
+        
+        
+                            <div class="content">
+                                <span>36</span>
+        
+                            <svg class="icones" xmlns="http://www.w3.org/2000/svg"  width="40" height="35" viewBox="0 0 24 24" style="fill: rgb(246, 235, 235);"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
+        
+        
+        
+                            </div>
+        
+                            
+        
+                        </div>
+        
+        
+                        
+        
+        
+        
+        
+        
+                    </div>
+        
+                    <div class="graficaInferior">
+                        <h6>On-time Completion Rate</h6>
+        
+                        <div class="contGrafi">
+                            <div class="numerosGrafica">
+                                <span >98%</span>
+                                <div class="gra">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" style="fill: #7DC09C;transform:rotate(140deg) ;"><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg>
+                                    <span class="num2">2.73%</span>
+                                </div>
+                                
+                            </div>
+        
+                            <div class="row">
+                                <div id="myfirstchart"></div>
+                            </div>
+        
+                        </div>
+        
+        
+                    </div>
+                    
+                    
+        
+                </div>
+        
+                <div class="parte2">
+                    <div class="Propiedades">
+        
+                        <h3>Properties</h3>
+        
+                        <div class="propiedad1">
+        
+                            <div class="numeroyCuadrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="" viewBox="0 0 24 24" style="fill: #2561D9;transform: rotate(90deg);"><path d="M17 2H7C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5z"></path></svg>
+                                <span>298</span>
+                            </div>
+        
+                            <div class="spans">
+                                <span style="font-weight: lighter; font-size: 12px; margin-left: 25px;">Occupied</span>
+                                <span style="color:#BEC4C7 ;  margin-left: 6px">48%</span>
+        
+                            </div>
+                            
+                            
+        
+                        </div>
+        
+                        <div class="propiedad2">
+                            <div class="numeroyCuadrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="" viewBox="0 0 24 24" style="fill: #19C0CC;transform: rotate(90deg);"><path d="M17 2H7C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5z"></path></svg>
+                                <span>249</span>
+                            </div>
+        
+                            <div class="spans">
+                                <span style="font-weight: lighter; font-size: 12px; margin-left: 25px;" >Vacant</span>
+                                <span style="color:#BEC4C7 ;  margin-left: 6px">39%</span>
+                                
+                            </div>
+                            
+                            
+        
+                        </div>
+        
+                        <div class="propiedad3">
+                            <div class="numeroyCuadrito">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="" viewBox="0 0 24 24" style="fill: #FA9111; transform: rotate(90deg);"><path d="M17 2H7C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5z"></path></svg>
+                                <span>85</span>
+                            </div>
+        
+                            <div class="spans">
+                                <span style="font-weight: lighter; font-size: 10px; margin-left: 25px;">Maintenance</span>
+                                <span style="color:#BEC4C7 ; margin-left: 6px" >13%</span>
+                                
+                            </div>
+                            
+        
+                        </div>
+                        
+                    </div>
+        
+                    <div class="grafica2">
+                        <div class="allProp">
+                            <span>All properties</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg>
+                        </div>
+                        <div id="Donut">
+
+                        </div>
+        
+                    </div>
+                    
+        
+                </div>
+        
+            </div>
+        </div>
+
+
+
+        
+    
+    
+
+
+
+
+
+
+    </div>
+    
+
+
+
+    <article class="right">
+        
+        <section class="perfil">
+            <div class="icons">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" style="fill: #FA9111;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1 16v-5H7l6-7v5h4l-6 7z"></path></svg>
+
+                <div class="fond">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M12 22a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22zm7-7.414V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v4.586l-1.707 1.707A.996.996 0 0 0 3 17v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1a.996.996 0 0 0-.293-.707L19 14.586z"></path></svg>
+                </div>
+                    
+                </div>
+            <div class="imgPerfil">
+                <div class="textoPerfil">
+                    <h4>Maurice Robbins</h4>
+                    <span>Manager</span>
+                </div>
+                <img src="https://i.ibb.co/m4KGHtc/Captura-desde-2022-11-24-09-24-12-removebg-preview.png" style="width: 4rem;height: 4rem;" alt="">
+            </div>
+        </section>
+
+        <section class="fecha">
+            <div class="fechaDes">
+                <span><b>Today,</b> 23 March</span>
+                <div class="flechitas">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg>
+
+                </div>
+            </div>
+        <div class="fechaDias">
+
+            <div class="dia-1">
+                <div class="dayCircle"> 21 </div>
+                <div class="puntos">
+                    <div class="punto-1"></div>
+                    <div class="punto-2"></div>
+                </div>
+                <div class="dayText">Mon</div>
+            </div>
+
+            <div class="dia-2">
+                <div class="dayCircle"> 22 </div>
+                <div class="puntos">
+                    <div class="punto-1"></div>
+                    <div class="punto-2"></div>
+                </div>
+                <div class="dayText">Tue</div>
+            </div>
+            
+            
+            <div class="dia-3">
+                <div class="dayCircle"> 23 </div>
+                <div class="puntos">
+                    <div class="punto-1"></div>
+                    <div class="punto-2"></div>
+                    <div class="punto-3"></div>
+                </div>
+                <div class="dayText">Wed</div>
+                <div class="lineaFecha"></div>
+            </div>
+
+
+            <div class="dia-4">
+                <div class="dayCircle"> 24 </div>
+                <div class="puntos">
+                    <div class="punto-1"></div>
+                    <div class="punto-2"></div>
+                </div>
+                <div class="dayText">Thu</div>
+            </div>
+
+
+            <div class="dia-5">
+                <div class="dayCircle"> 25 </div>
+                <div class="puntos">
+                    <div class="punto-1"></div>
+                    <div class="punto-2"></div>
+                    <div class="punto-3"></div>
+                </div>
+                <div class="dayText">Fri</div>
+            </div>
+
+
+            <div class="dia-6">
+                <div class="dayCircle"> 26 </div>
+                <div class="puntos">
+                    <div class="punto-1"></div>
+                </div>
+                <div class="dayText">Sat</div>
+            </div>
+
+
+            <div class="dia-7">
+                <div class="dayCircle"> 27</div>
+                <div class="puntos">
+                </div>
+                <div class="dayText">Sun</div>
+            </div>
+
+        </div>
+        </section>
+
+        <section class="calendario">
+            <div class="horas">
+                <div class="hora">9:30 am</div>
+                <div class="hora">10:00 am</div>
+                <div class="hora">10:30 am</div>
+                <div class="hora">11:00 am</div>
+                <div class="hora">11:30 am</div>
+            </div>
+            <div class="asuntos">
+                <div class="asu">
+                    <div class="asunto-1">
+    
+                        <div class="icono">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #19C0CC"><path d="M21 20V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2zM9 18H7v-2h2v2zm0-4H7v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm2-5H5V7h14v2z"></path></svg>
+                        </div>
+                        <div class="texto">
+                            <h4 class="taskTitle">Monthly - Landscaping</h4>
+                            <span class="taskDes">Internal Task</span>
+                        </div>
+    
+                    </div>
+    
+                    <div class="asunto-2">
+    
+                        <div class="icono">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #FA9111;"><path d="m14.303 6-3-2H6V2H4v20h2v-8h4.697l3 2H20V6z"></path></svg>
+                        </div>
+                        <div class="texto">
+                            <h4 class="taskTitle">Broken Clamp</h4>
+                            <span class="taskDes">Maintenance Request</span>
+                        </div>
+    
+                    </div>
+                </div>
+                
+                <div class="asunto-3">
+
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #2253DD;"><path d="M20 3H4c-1.103 0-2 .897-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5c0-1.103-.897-2-2-2zm-1 9h-3.142c-.446 1.722-1.997 3-3.858 3s-3.412-1.278-3.858-3H4V5h16v7h-1z"></path></svg>
+                    </div>
+                    <div class="texto">
+                        <h4>Generate Report</h4>
+                        <span>Personal Task</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="activities">
+            
+            <div class="title">
+
+                <h2 class="Recent">Recent Activities</h2>
+                <div class="pun">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                </div>
+                
+
+            </div>
+
+
+            <div class="tasks">
+
+                <div class="task-1">
+                    <div class="img">
+                        <img class="H" src="./H-removebg-preview.png" >
+                    </div>
+                    <div class="descTask">
+                        <div class="bool">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #F96735;"><path d="m14.303 6-3-2H6V2H4v20h2v-8h4.697l3 2H20V6z"></path></svg>
+                            <span class="New">New Task</span>
+                        </div>
+                        <p class="descripcionCompleta">
+                            <b>Logan Harrington</b> created new mai...
+                        </p>
+                        <span>Today, 9:48 AM</span>
+                    </div>
+            </div>
+            <div class="task-2">
+                
+                <div class="desc">
+                    <div class="waterContaint" >
+                        <b class="waterTitle">Water Drip from Faucets</b>
+                        <span class="descT">#284</span>
+                        
+                    </div>
+                    <div >
+                        <b class="descrip">MAINTENANCE</b> 
+                    </div>
+                </div>
+            </div>
+            <div class="task-3">
+                <div class="img">
+                    <img class="H"src="./M-removebg-preview.png">
+                </div>
+                <div class="descTask">
+                    <div class="bool1">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #389764;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
+                        <span>Task Completed</span>
+
+                    </div>
+                    <p class="descripcionCompleta">
+                        <b>Georgia Mollie</b> completed task <b>#276</b>
+                    </p>
+                    <span>Yesterday, 3:58 PM</span>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+            
+        </section>
+    </article>
+    <script src="index.js"></script>
+</body>
+</html>

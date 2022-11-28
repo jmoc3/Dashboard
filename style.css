@@ -1,0 +1,1056 @@
+:root{
+
+    --azul-barras-claro:#B5EAEE;
+    --azul-aguaMarina: #19c0cc;
+    --azul: #2253DD;
+    --azul-oscuro: #11383d;
+    --azul-claro: #1B4F53;
+    --gris-iconos: #49727B;
+    --naranja: #FA9111;
+    --naranja-Actividades: #F96735;
+} 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    block-size: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    background-color: var(--azul-oscuro);
+}
+
+.imagen{
+    
+    display: flex;
+    justify-content: center;
+    inline-size: inherit;
+    background-color: var(--azul-claro);
+
+}
+
+.mont{
+    block-size:6vh;
+    
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.iconM{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    padding: 5px 6px 4px 6px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.iconF{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    padding-left: 2px;
+    border-radius: 50%;
+    background-color: var(--gris-iconos);
+}
+
+.icon:hover{
+    background-color: white;
+    transition: all ease .8s;
+}
+.iconM:hover{
+    background-color: white;
+    transition: all ease .8s;
+}
+.iconF:hover{
+    background-color: white;
+    transition: all ease .8s;
+    padding: 6px 4px 4px 6px;
+}
+
+
+.icons{
+    display: flex;
+    block-size:94%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.icons1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    block-size:50%;
+    justify-content: space-evenly;
+}
+
+.icons2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    block-size:20%;
+    justify-content: space-evenly;
+}
+
+/*no se si salga bien :) att pao */
+.mitad {
+
+    /*width:50% ;*/
+
+    
+    display: flex;
+    gap: 2.3rem;
+    block-size: inherit;
+    overflow-x: hidden;
+    inline-size: 100%;
+
+    padding: 2rem 4rem;
+    flex-direction: column;
+
+
+}
+
+.mitad::-webkit-scrollbar{
+
+    inline-size: .3rem;
+    background-color: var(--azul-claro);
+    
+}
+
+.mitad::-webkit-scrollbar-thumb{
+    
+    border-radius: 1rem;
+    background-color: var(--naranja);
+
+}
+
+
+.header{
+
+    display: grid;
+    gap: 2rem;
+    
+}
+
+.header .Title{
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.header input{
+    border: rgba(232, 239, 239, 0.95);
+    padding: 8px 150px 10px 10px;
+    border-radius: 20px;
+    background-color: rgba(232, 239, 239, 0.95);
+}
+
+.search-icon{
+    position: absolute;
+    right: 10px;
+    top: 24%;
+	width: 20px;
+	height: 20px;
+}
+
+.profileImg{
+    display: flex;
+    gap: 2rem;
+}
+
+.profileText{
+
+    display: grid;
+    gap: .7rem;
+    align-content: center;
+
+}
+
+.saludo{
+    font-size: 20px;
+}
+
+.header .saludo1{
+    font-weight: bolder;
+}
+
+.search{
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.text{
+    color: rgba(118, 118, 118);
+    font-size: 13px;
+}
+
+.expensesActivity{
+    display: grid;
+    gap: 3.6rem;
+    padding: 25px;
+    position: relative;
+    font-family: 'Montserrat',sans-serif;
+    border: 3px solid rgba(232, 239, 239, 0.95);
+    border-radius: 20px;
+    inline-size: 100%;
+}
+
+.context{
+
+    display: grid;
+    gap: 1rem;
+
+}
+
+.context .date{
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.context .remaining-money{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.topExp{
+
+    display: flex;
+    justify-content: space-between;
+    gap: 16rem;
+
+}
+
+#graph{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    block-size: 100%;
+    padding-right: 4rem;
+
+}
+
+
+
+
+#graph :hover{
+    color: var(--azul);
+    cursor: pointer;
+}
+
+.context h3{
+    font-size: 40px;
+}
+
+.context p{
+    margin-top: 10px;
+}
+
+.month{
+    margin-top: 13px;
+    margin-left: 695px;
+}
+
+.spanes{
+
+    display: flex;
+    gap: 1rem;
+
+}
+
+.spancito {
+
+    display: flex;
+    padding-left: 3rem;
+    gap: 3.5rem;
+
+}
+
+.context .porcentaje{
+    color: rgb(5, 160, 5);
+}
+
+.context .days{
+    color: rgba(118, 118, 118);
+}
+
+.expensesActivity .line{
+    left: 3%;
+    top: 67%;
+    position: absolute;
+    height: .5%;
+    inline-size: 93%;
+    background-color: rgba(232, 239, 239, 0.95);
+    border-radius: 1rem;
+    
+}
+
+
+.Income-Expenses .cash-green-icon{
+    position: absolute;
+}
+
+.Income-Expenses .total-income{
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 78px;
+}
+
+.Income-Expenses .total-expenses{
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 336px;
+}
+
+.Income-Expenses .cash-red-icon{
+    position: absolute;
+    margin-left: 260px;
+}
+
+.Income-Expenses p{
+    margin-top: 10px;
+    margin-left: 78px;
+}
+
+.Income-Expenses .descripcion{
+    padding-left: 388px;
+}
+
+
+/*parte pao */
+
+
+.hijos{
+
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+
+.parte1{
+    
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    border: 3px solid #F2F2F2 ;
+    border-color: #F2F2F2 ;
+    padding: 20px;
+
+}
+
+.partes{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+
+    
+}
+
+.parte1 h3{
+    
+    font-size: 2rem;
+    padding-bottom: 40px;
+}
+
+.parte1 h4{
+    color: #F2F2F2;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.79rem;
+    padding: 0.5rem;
+}
+
+
+
+.parte1 .cuadro1{
+  
+    width: 35%;
+    background-color: var(--naranja);
+    border-radius: 0.5rem; 
+    overflow: hidden;
+    
+
+   
+}
+
+
+.parte1 .cuadro2{
+    width: 35%;
+    background-color: #2561D9;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+}
+
+
+.parte1 .cuadro3{
+    width: 35%;
+    background-color: #1BBFBF;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.partes span{
+    
+    color: #F2F2F2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.icones{
+   
+
+    opacity: 0.5;
+    position: absolute;
+    left: 67%;
+    top: 2%;
+    
+
+}
+
+.content{
+    
+    position: relative;
+    display: flex;
+    
+    
+}
+
+.grafica2{
+
+    display: grid;
+    gap: 1rem;
+
+}
+
+.grafica2 span{
+
+    justify-self: end;
+    color: var(--azul-aguaMarina);
+
+}
+
+.grafica2 span:hover{
+
+    cursor: pointer;
+
+}
+
+
+.graficaInferior h6{
+    padding: 20px;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+.contGrafi{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+.gra{
+    display: flex;
+    margin-top: 12px;
+}
+
+.row{
+    width: 50%;
+}
+
+#myfirstchart{
+    height: 100px;
+    width: 200px;
+
+}
+.numerosGrafica {
+   padding-left: 20px;
+   display: flex;
+}
+
+.numerosGrafica span {
+    font-size: 25px;
+    font-weight: bold;
+    padding-right: 10px;
+
+}
+
+.numerosGrafica  .num2{
+    font-size: 15px;
+    font-weight: bold;
+    color: #7DC09C;
+
+}
+
+.grafica{
+    
+    width: 45%;
+}
+
+
+.grafica img{
+    
+    left: 100%;
+    margin-bottom: 20px;
+}
+
+.numFlechita{
+    display: flex;
+}
+
+
+.parte2{
+    display: grid;
+    grid-template-areas: "a b";
+    width: 100% ;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    border: 3px solid #F2F2F2 ;
+    border-color: #F2F2F2 ;
+    padding: 20px;
+}
+
+.Propiedades{
+    width: 80%;
+    /* background-color: #164B51; */
+}
+
+.Propiedades h3{
+    font-size: 2rem;
+    padding-bottom: 40px;
+}
+
+.numeroyCuadrito span{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.Propiedades .propiedad1{
+    padding-bottom: 25px;
+}
+
+.Propiedades .propiedad2{
+    padding-bottom: 25px;
+}
+
+#Donut{
+
+    inline-size: 300px;
+    block-size: 300px;
+
+}
+
+
+/*hasta aca va lo mio :) */
+
+
+
+
+.right{
+    
+    block-size:inherit;
+    padding: .5rem 2rem;
+    display:grid;
+    gap: .5rem;
+    border-left: thin solid rgba(232, 239, 239, 0.95);
+
+}
+
+.right::-webkit-scrollbar{
+
+    inline-size: .3rem;
+    background-color: var(--azul-claro);
+    
+}
+
+.right::-webkit-scrollbar-thumb{
+    
+    border-radius: 1rem;
+    background-color: var(--naranja);
+
+}
+
+.perfil{
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: thin solid rgba(232, 239, 239, 0.95);
+
+}
+
+.perfil .icons{
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    
+    block-size: inherit;
+
+}
+
+.perfil .imgPerfil{
+
+    display: flex;
+    align-items: center;
+
+    gap: .5rem;
+    text-align: end;
+
+}
+
+.perfil .icons .fond{
+
+    padding: .5rem;
+    border-radius: 50%;
+
+     background: rgba(232, 239, 239, 0.95)
+
+}
+
+.perfil .textoPerfil{
+
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+
+}
+
+.perfil .textoPerfil span{
+
+    color: rgb(88, 95, 95)
+
+}
+
+.fecha{
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-bottom: 1px solid rgba(232, 239, 239, 0.95);
+
+}
+
+.fecha .lineaFecha{
+
+    position: absolute;
+    top: 99%;
+
+    inline-size: 100%;
+    block-size: 3px;
+
+    display: none;
+    background-color: var(--azul-oscuro)
+
+}
+
+.fecha .fechaDes{
+
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.fecha .fechaDes span{
+
+    font-size:1.5rem
+
+}
+
+.fecha .fechaDes .flechitas{
+
+    display: flex;
+   gap: 1rem;
+
+}
+
+.fecha .fechaDias{
+
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+.fecha .fechaDias .dayCircle{
+
+    font-size: 15px;
+    text-align: center;
+    
+    background-color: rgba(232, 239, 239, 0.95);
+    padding: .8rem;
+    border-radius: 50%;
+
+}
+
+.dayText{
+
+    font-size: 12px;
+
+}
+
+.fecha .fechaDias .dayCircle:hover {
+    
+    transform: scale(1.1);
+    background-color: var(--azul-oscuro);
+    color: white;
+    cursor: pointer; 
+    
+    transition: all ease .3s;
+
+}
+
+.fecha .fechaDias .dayCircle:hover .fecha .lineaFecha{
+    
+    display: block
+
+}
+
+[class*="dia"]{
+
+    display: grid;
+    gap: .5rem;
+    padding-bottom: 1rem;
+    
+}
+
+.puntos{
+    
+    display: flex;
+    gap: .2rem;
+    justify-content: center;
+    margin-bottom: .5rem;
+    
+}
+
+[class*="punto-"]{
+
+    inline-size: 7px;
+    block-size: 7px;
+    
+    background-color: black;
+    border-radius: 50%;
+
+}
+
+.dia-1 .puntos .punto-1{
+
+    background-color: var(--azul-aguaMarina)
+    
+}
+.dia-1 .puntos .punto-2{
+    
+    background-color: var(--naranja)
+    
+}
+
+
+.dia-2 .puntos .punto-1{
+
+    background-color: var(--naranja)
+    
+}
+
+.dia-2 .puntos .punto-2{
+    
+    background-color: var(--azul)
+
+}
+
+.dia-3{
+    
+    position: relative;
+    
+}
+
+.dia-3 .puntos .punto-1{
+    
+    background-color: var(--azul-aguaMarina)
+    
+}
+
+.dia-3 .puntos .punto-2{
+
+    background-color: var(--naranja)
+    
+}
+
+.dia-3 .puntos .punto-3{
+    
+    background-color: var(--azul)
+    
+}
+
+.dia-4 .puntos .punto-1{
+    
+    background-color: var(--azul-aguaMarina)
+    
+}
+
+.dia-4 .puntos .punto-2{
+
+    background-color: var(--azul)
+    
+}
+
+.dia-5 .puntos .punto-1{
+
+    background-color: var(--azul-aguaMarina)
+    
+}
+
+.dia-5 .puntos .punto-2{
+    
+    background-color: var(--naranja)
+    
+}
+
+.dia-5 .puntos .punto-3{
+    
+    background-color: var(--azul)
+    
+}
+
+.dia-6 .puntos .punto-1{
+    
+    background-color: var(--naranja)
+    
+}
+
+.calendario{
+    
+    display:flex;
+    border-bottom: thin solid rgba(232, 239, 239, 0.95);
+    padding-block: 1rem;
+    gap: 1.5rem;
+}
+
+.calendario .horas{
+    
+    gap: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+    
+}
+
+.calendario .hora{
+
+    inline-size: 5rem;
+
+}
+
+[class*="asunto-"]{
+
+    display: flex;
+    justify-content: space-around;
+    inline-size:18.5vw;
+    border-radius: 15px;
+    padding:8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.541);
+}
+.asunto-1{
+    margin-top: 17px;
+    background-color: var(--azul-aguaMarina);
+}
+.asunto-1 .texto{
+    inline-size: 70%;
+}
+.asunto-2{
+    margin-bottom: 2rem;
+    background-color: var(--naranja);
+}
+.asunto-2 .texto{
+    inline-size: 70%;
+}
+.texto{
+    color:white;
+}
+
+.tasks{
+
+    position: relative;
+    display: grid;
+    gap: 2rem;
+
+}
+
+.taskTitle{
+
+    font-size: 15px;
+
+}
+
+.taskDesc{
+
+    font-size: 12px;
+
+}
+
+.icono{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.asunto-3 {
+    background-color: var(--azul);
+}
+
+.asunto-3 .texto{
+    inline-size: 70%;
+}
+
+.asu{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.title{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Recent{
+    inline-size: 100%;
+}
+
+.pun{
+    display: flex;
+    align-items: center;
+}
+
+[class*="task-"]{
+    display: flex;
+}
+
+.task-2{
+
+    justify-self: end;
+
+}
+
+
+.img{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.descTask{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.waterContaint{
+
+    display: flex;
+    gap: 1rem;
+
+
+}
+
+.H{
+    inline-size: 50%;
+}
+
+.deskTask span{
+
+    font-size: 14px;
+
+}
+
+[class*="bool"]{
+    display: flex;
+    gap: 1rem;
+    inline-size: 100%;
+}
+.descripcionCompleta{
+    font-size: 14px;
+}
+.New{
+    font-weight: 600;
+    color:var(--naranja-Actividades)
+}
+.desc{
+    display: grid;
+    gap: .7rem;
+    padding:  5% 6%;
+    background-color: white;
+    border: solid 1px rgba(162, 180, 180, 0.979);
+    border-radius: 15px;
+    padding: 1rem 5rem 1rem 1rem;
+}
+
+.waterTitle{
+
+    font-size: 15px;
+    inline-size: max-content;
+
+}
+
+.descT{
+    font-size: 14px;
+    color: rgba(88, 105, 105, 0.979);
+}
+.descrip{
+    background-color: var(--naranja-Actividades);
+    color:white;
+    padding: 3px 6px;
+    border-radius: 20px;
+}
+.bool1{
+
+    text-align: start;
+    font-weight: 600;
+    color:#389764;
+}
+.activities{
+    
+    display: grid;
+    gap: 1rem;
+    padding-block-end: 2rem;
+
+}
+
+.tasks .line{
+
+    position: absolute;
+    block-size: 75%;
+    top: 30px;
+    left: 50px;
+    z-index: -1;
+    inline-size: 4px;
+    background-color: rgba(162, 180, 180, 0.979);
+
+
+}
